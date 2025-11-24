@@ -1,3 +1,14 @@
+cdebconf (0.282) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * Enable building without libglib2.0-dev (closes: #1078936).
+
+  [ Colin Watson ]
+  * dpkg-preconfigure: Use /usr/lib/apt/apt-extracttemplates, which is now
+    always available (closes: #1087524).
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 21 Nov 2025 13:01:26 +0000
+
 cdebconf (0.281) unstable; urgency=medium
 
   [ Holger Wansing ]

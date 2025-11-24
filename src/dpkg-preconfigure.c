@@ -12,7 +12,7 @@
 #include <string.h>
 #include <sys/stat.h>
 
-#define APT_EXTRACTTEMPLATES "apt-extracttemplates"
+#define APT_EXTRACTTEMPLATES "/usr/lib/apt/apt-extracttemplates"
 
 struct packagename {
     char *p;
@@ -115,50 +115,6 @@ static struct package *extract(const char *file)
     }
 }
 
-static int extracttemplates_available()
-{
-    int retval = 1;
-    char *fp = NULL, *p;
-    int flen = 0;
-    char *path = getenv("PATH");
-
-    if (!path)
-        return 1;
-
-    path = strdup(path);
-    p = path;
-    while (p && retval)
-    {
-        char *n = strchr(p, ':');
-        if (n)
-            *n++ = '\0';
-        if (*p)
-        {
-            struct stat s;
-            int len = strlen(p) + 1 + strlen(APT_EXTRACTTEMPLATES) + 1;
-            if (len > flen)
-            {
-                char *np = realloc(fp, len);
-                if (!np)
-                    break;
-                fp = np;
-            }
-            if (p[strlen(p)-1] == '/')
-                sprintf(fp, "%s%s", p, APT_EXTRACTTEMPLATES);
-            else
-                sprintf(fp, "%s/%s", p, APT_EXTRACTTEMPLATES);
-            if (!access(fp, X_OK) && !stat(fp, &s) && S_ISREG(s.st_mode))
-                retval = 0;
-        }
-
-        p = n;
-    }
-    free(path);
-    free(fp);
-
-    return retval;
-}
-
 int main(int argc, char **argv)
 {
     struct configuration *config;
@@ -199,12 +155,6 @@ int main(int argc, char **argv)
     {
         fprintf(stderr, "dpkg-preconfigure: must specify some debs to preconfigure\n");
         exit(1);
-    }
-
-    if (extracttemplates_available())
-    {
-        INFO(INFO_WARN, "delaying package configuration, since apt-utils is not installed\n");
-        exit(0);
     }
 
     /* parse the configuration info */
