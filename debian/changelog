@@ -1,3 +1,12 @@
+cdebconf (0.282+nmu1) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload.
+  * [ Updated translations ] Uploader: please replace this entry with
+    data from https://d-i.debian.org/translations.txt before uploading
+    !!!
+
+ -- D-I role <debian-boot@lists.debian.org>  Sun, 12 Apr 2026 20:15:12 +0000
+
 cdebconf (0.282) unstable; urgency=medium
 
   [ Helmut Grohne ]
