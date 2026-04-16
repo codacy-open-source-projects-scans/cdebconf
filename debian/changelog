@@ -1,3 +1,12 @@
+cdebconf (0.283) UNRELEASED; urgency=medium
+
+  * Team upload.
+  * [ Updated translations ] Uploader: please replace this entry with
+    data from https://d-i.debian.org/translations.txt before uploading
+    !!!
+
+ -- D-I role <debian-boot@lists.debian.org>  Wed, 15 Apr 2026 20:15:06 +0000
+
 cdebconf (0.282) unstable; urgency=medium
 
   [ Helmut Grohne ]
