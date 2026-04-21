@@ -27,7 +27,7 @@ msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_bs\n"
 "Report-Msgid-Bugs-To: cdebconf@packages.debian.org\n"
 "POT-Creation-Date: 2016-06-05 14:47+0000\n"
-"PO-Revision-Date: 2026-04-11 21:10+0000\n"
+"PO-Revision-Date: 2026-04-20 19:09+0000\n"
 "Last-Translator: pacavarn <nahadster@gmail.com>\n"
 "Language-Team: Bosnian <lokal@linux.org.ba>\n"
 "Language: bs\n"
@@ -250,14 +250,14 @@ msgstr "Slika spremljena kao %s"
 #: ../cdebconf-text-udeb.templates:1001
 #, no-c-format
 msgid "!! ERROR: %s"
-msgstr "!! ERROR: %s"
+msgstr "!! GREŠKA: %s"
 
 #. Type: text
 #. Description
 #. :sl4:
 #: ../cdebconf-text-udeb.templates:2001
 msgid "KEYSTROKES:"
-msgstr "KEYSTROKES:"
+msgstr "PRITISCI TIPKI:"
 
 #. Type: text
 #. Description
@@ -326,7 +326,7 @@ msgstr "Prompt: '%c' za pomoć, podrazumijevano=%d> "
 #: ../cdebconf-text-udeb.templates:13001
 #, no-c-format
 msgid "Prompt: '%c' for help> "
-msgstr "Prompt: '%c' za pomoć> "
+msgstr "Upit: '%c' za pomoć> "
 
 #. Type: text
 #. Description
@@ -334,7 +334,7 @@ msgstr "Prompt: '%c' za pomoć> "
 #: ../cdebconf-text-udeb.templates:14001
 #, no-c-format
 msgid "Prompt: '%c' for help, default=%s> "
-msgstr "Prompt: '%c' za pomoć, podrazumijevano=%s> "
+msgstr "Upit: '%c' za pomoć, zadano=%s> "
 
 #. Type: text
 #. Description
@@ -348,7 +348,7 @@ msgstr "[Pritisnite enter za nastavak]"
 #. :sl4:
 #: ../cdebconf.templates:1001
 msgid "Interface to use:"
-msgstr "Interfejs koji će se koristiti:"
+msgstr "Interfejs za korištenje:"
 
 #. Type: select
 #. Description
